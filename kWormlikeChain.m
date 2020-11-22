@@ -324,39 +324,4 @@ function val = Sk_WR(q,L,b)
             end
         end
     end
-    
-    
-%     
-% 
-%   
-%     if 1.9/Rg_short > 3.0
-%         q0short = 1.9/Rg_short;
-%     else
-%         q0short = 3.0;
-%     end
-%     
-%     if L > 4*b
-%         for i=1:length(q)
-%             if q(i)*b <= 3.1
-%                 val(i) = Sexv_new(q(i), L, b);
-%             else
-%                 val(i) = a1long(L,b,p1,p2,q0)/(power((q(i)*b),p1)) + ...
-%                     a2long(L, b, p1, p2, q0)/(power((q(i)*b),p2)) + pi/(q(i)*L);
-%             end
-%         end
-%     else
-%         for i=1:length(q)
-%             if q(i)*b <= q0short
-%                 if q*b <= 0.01
-%                    val(i) = 1.0 - Rgsquareshort(L,b)*(q(i)*q(i))/3.0; 
-%                 else
-%                    val(i) = Sdebye((q(i)*Rg_short).^2);
-%                 end
-%             else
-%                 val(i) = a1short(L,b,p1short,p2short,q0short)/...
-%                     (power((q(i)*b),p1short)) + a2short(L,b,p1short,...
-%                     p2short,q0short)/(power((q(i)*b),p2short)) + pi/(q(i)*L);
-%             end
-%         end
-%     end
 end
